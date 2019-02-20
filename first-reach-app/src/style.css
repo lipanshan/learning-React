@@ -1,0 +1,21 @@
+.App .input {
+  display: block;
+  width: 200px;
+  height: 24px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  color: #333; }
+.App .list {
+  padding: 0;
+  width: 200px;
+  list-style: none; }
+  .App .list > li {
+    font-size: 12px;
+    line-height: 24px;
+    color: #333;
+    padding: 5px 10px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

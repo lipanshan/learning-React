@@ -1,0 +1,862 @@
+@import "./variable"
+@import "./mixin"
+.login
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  min-width: 400px
+  min-height: 400px
+  height: 100%
+  background: radial-gradient(circle, #533dc6 0, #0b306d 155px, #011e40 306px, #011e40 1920px) #011e40
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0, rgba(246, 246, 246, 0.1) 100%)
+    z-index: 10
+  .login-content
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    margin-left: 134px
+    width: 270px
+    height: 320px
+    text-align: center
+    border-radius: 8px
+    background-color: $bg-color-n
+    z-index: 20
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: -316px
+      margin-top: 33px
+      width: 290px
+      height: 252px
+      background: url(../../static/images/login-left.png) no-repeat 0 0
+      background-size: 289px 251px
+    .login-icon
+      margin: 21px auto 0
+      width: 134px
+      &>img
+        display: block
+        width: 134px
+        height: 18px
+    &>h1
+      position: relative
+      margin: 10px auto 13px
+      width: 252px
+      font-size: $font-l
+      line-height: 28px
+      color: $color-m
+      text-align: center
+      .version
+        display: inline-block
+        vertical-align: top
+        margin-left: 5px
+        font-size: $font-n
+        line-height: 26px
+        color: $color-s
+        font-family: Arial
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        margin-top: 14px
+        width: 25px
+        height: 1px
+        background-color: $border-color-n
+      &::after
+        content: ""
+        diplay: block
+        position: absolute
+        top: 0
+        right: 0
+        margin-top: 14px
+        height: 1px
+        width: 25px
+        background-color: $border-color-n
+    .form
+      padding: 0 25px
+      .form-group
+        position: relative
+        margin-bottom: 0
+        padding-bottom: 24px
+        display: flex
+        .input-wrap
+          flex: 1
+          border-radius: 4px
+          &>input
+            box-sizing: border-box
+            width: 100%
+            height: 30px
+            padding: 0 5px
+            font-size: $font-n
+            line-height: 30px
+            border: 1px solid $border-color-n
+            border-radius: 4px
+            &:focus
+              border-radius: 4px
+        .vcode-input
+          width: 120px
+        .vcode
+          margin-left: 5px
+          display: flex
+          &>img
+            display: block
+            width: 70px
+            height: 30px
+          .refresh-btn
+            width: 30px
+            height: 30px
+            cursor: pointer
+            border-radius: 4px
+            text-align: center
+            background: url(../../static/images/refresh.png) no-repeat 6px 6px $refresh-bg
+        .error-cls
+          input
+            border: 1px solid $error !important
+        .error-message
+          position: absolute
+          bottom: 0
+          left: 0
+          padding-left: 21px
+          font-size: $font-n
+          line-height: 24px
+          color: $color-error
+          &:before
+            content: ""
+            display: block
+            position: absolute
+            top: 5px
+            left: 2px
+            width: 14px
+            height: 14px
+            background: url(../../static/images/danger-icon.png) no-repeat 0 0
+      .form-action
+        position: relative
+        .submit
+          display: block
+          padding: 0
+          width: 100%
+          height: 34px
+          background-color: $btn-bg-n
+          border-radius: 34px
+          color: $color-xs
+          font-size: $font-l
+          line-height: 32px
+          cursor: pointer
+          &:hover
+            background-color: $btn-bg-n-hover
+          &:active
+            background-color: $btn-bg-n-active
+      .message
+        font-size: $font-n
+        line-height: 36px
+        color: $color-note
+        text-align: center
+.menu
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  width: 150px
+  z-index: 200
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  background-color: $bg-color-xl
+  &>h1
+    flex: 0 0 40px
+    height: 40px
+    padding-top: 21px
+    font-size: 0
+    text-align: center
+    &>img
+      margin: 0 auto
+      display: block
+      width: 132px
+      height: 18px
+
+  .menu-list
+    flex: 1
+    overflow: hidden
+    .menu-content
+      .item
+        .menu-txt
+          display: flex
+          padding-top: 8px
+          padding-bottom: 8px
+          .left-icon
+            margin-left: 24px
+            display: block
+            flex: 0 0 16px
+            width: 18px
+            height: 18px
+            background: url(../../static/images/menu-icons.png) no-repeat 0 100px
+          &>.title
+            flex: 1
+            margin-left: 12px
+            font-size: $font-l
+            line-height: 16px
+            color: $color-xs
+            text-decoration: none
+          .arrow-icon
+            display: block
+            flex: 0 0 30px
+            width: 30px
+            height: 16px
+            background: url(../../static/images/arrow-icon.png) no-repeat 0 0
+            cursor: pointer
+            &.up
+              background-position: 0 -16px
+          &.menu0
+            &>.left-icon
+              background-position: 0 0
+            &:hover
+              &>.left-icon
+                background-position: -60px 0
+          &.menu1
+            &>.left-icon
+              background-position: 0 -20px
+            &:hover
+              &>.left-icon
+                background-position: -60px -20px
+          &.menu2
+            &>.left-icon
+              background-position: 0 -39px
+            &:hover
+              &>.left-icon
+                background-position: -60px -39px
+          &.menu3
+            &>.left-icon
+              background-position: 0 -60px
+            &:hover
+              &>.left-icon
+                background-position: -60px -60px
+          &.menu4
+            &>.left-icon
+              background-position: -1px -80px
+            &:hover
+              &>.left-icon
+                background-position: -61px -80px
+            &.active, &:active
+              &>.left-icon
+                background-position: -121px -80px
+          &.menu5
+            &>.left-icon
+              background-position: -1px -100px
+            &:hover
+              &>.left-icon
+                background-position: -61px -100px
+            &.active, &:active
+              &>.left-icon
+                background-position: -121px -100px
+          &:hover
+            &>.title
+              color: $btn-bg-n
+          &.active, &:active
+            .left-icon
+              background-position-x: -120px
+            &>.title
+              color: $btn-bg-n
+      &.hide
+        display: none
+  .version-info
+    &>.title
+      margin: 0 auto
+      width: 100px
+      font-size: $font-l
+      line-height: 30px
+      text-align: center
+      border: 1px solid $border-color-xs
+      border-radius: 4px
+      color: $btn-bg-n-active
+    &>.subtitle
+      margin-top: 4px
+      font-size: $font-n
+      line-height: 20px
+      text-align: center
+      color: #516377
+    &>.txt
+      @extend .subtitle
+  .scrollbar-container
+    border-radius: 8px
+    background: none !important
+  .scrollbar
+    border-radius: 8px
+    background-color: #fff !important
+.header-wrap
+  height: 54px
+  background-color: $bg-color-n
+  &>h1
+    float: left
+    margin-left: 19px
+    padding-top: 15px
+    padding-bottom: 15px
+    font-size: $font-g
+    line-height: 24px
+    color: $color-n
+  .avatar-wrap
+    float: right
+    padding-right: 24px
+    display: flex
+    &>img
+      margin-top: 10px
+      margin-right: 9px
+      display: block
+      flex: 0 0 30px
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      overflow: hidden
+    .nickname
+      margin-top: 10px
+      margin-right: 12px
+      display: block
+      flex: 1
+      font-size: $font-n
+      line-height: 30px
+      color: $color-m
+    .sign-out
+      display: block
+      margin-top: 16px
+      margin-right: 11px
+      padding: 0 14px
+      flex: 0 0 24px
+      width: 24px
+      height: 20px
+      font-size: $font-n
+      line-height: 20px
+      color: $color-s
+      cursor: pointer
+      border-left: 1px solid $border-color-l
+      white-space: nowrap
+.container
+  margin-left: 150px
+  min-width: 850px
+@keyframes move
+  0%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(360deg)
+.home-wrap
+  padding: 10px 8px 22px 26px
+  background-color: $bg-color-l
+  .data
+    display: flex
+    .column1
+      margin-right: 10px
+      display: flex
+      flex: 65
+      background-color: $bg-color-n
+      border-radius: 8px
+      &>.icon
+        display: block
+        position: relative
+        margin: 8px 0 8px 14px
+        flex: 0 0 118px
+        width: 118px
+        height: 77px
+        border-right: 1px solid $border-color-n
+        background: url(../../static/images/radar1.png) no-repeat 0 0
+        overflow: hidden
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          width: 77px
+          height: 77px
+          background: url(../../static/images/radar2.png) no-repeat 2px 2px
+          background-size: 72px 72px
+          animation: 4s move linear infinite
+      &>.txt
+        padding-top: 8px
+        flex: 1
+        .title
+          padding: 3px 0
+          font-size: $font-n
+          line-height: 14px
+          text-align: center
+          &:before
+            content: ""
+            margin-right: 6px
+            display: inline-block
+            vertical-align: top
+            width: 16px
+            height: 14px
+            background: url(../../static/images/radar-icon.png) no-repeat 0 0
+        .num
+          margin-top: 17px
+          font-size: 24px
+          line-height: 40px
+          text-align: center
+          color: $error
+          &.w::after
+            content: "万"
+            margin-left: 3px
+            display: inline-block
+            vertical-align: top
+            font-size: $font-n
+            line-height: 48px
+            color: $error
+    .column2
+      @extend .column1
+      flex: 44
+      &>.txt
+        .num
+          color: $color-n
+          &.w::after
+            content: "万"
+            margin-left: 3px
+            display: inline-block
+            vertical-align: top
+            font-size: $font-n
+            line-height: 48px
+            color: $color-n
+        .title
+          &:before
+            width: 16px
+            height: 16px
+            background: url(../../static/images/tcp-icon.png) no-repeat 0 0
+      &:last-child
+        margin-right: 0
+  .network-chart
+    margin-top: 10px
+    height: 274px
+    background: $bg-color-n
+    border-radius: 8px
+  .chart-row
+    display: flex
+    margin-top: 10px
+    .cpu-chart
+      margin-right: 10px
+      flex: 33
+      height: 272px
+      background: $bg-color-n
+      border-radius: 8px
+    .pie-chart
+      @extend .cpu-chart
+      flex: 23
+      &:last-child
+        margin-right: 0
+
+.riskwarning
+  padding: 10px
+  background-color: $bg-color-l
+  .search-wrap
+    display: flex
+    padding: 10px 0 10px 30px
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    background-color: $bg-color-n
+    border-bottom: 1px solid $border-color-n
+    .title
+      margin-right: 10px
+      display: block
+      font-size: $font-n
+      line-height: 24px
+      color: $color-n
+    .select
+      margin-right: 8px
+      width: 100px
+      height: 24px
+      border: 1px solid $border-color-l
+      border-radius: 24px
+      &>div:nth-child(1), &>span, &>div:nth-child(2)
+        padding: 0 0 0 15px
+        height: 22px
+        border: none
+        background: none
+        min-height: auto
+        border-radius: 24px
+        &>div
+          padding: 0
+          height: 22px
+          font-size: $font-n
+          line-height: 22px
+          color: $color-select
+      &>div:nth-child(3)
+        min-width: 120px
+        white-space: nowrap
+    .search-input
+      margin-right: 8px
+      padding: 4px 15px
+      width: 164px
+      border-radius: 24px
+      font-size: 12px
+      line-height: 16px
+      height: 24px
+      border: 1px solid $border-color-l
+      &:focus
+        outline: none
+        border-color: #2684FF
+    .time-input
+      &>input
+        @extend .search-input
+    .datepicker-wrap
+      margin-right: 10px
+      width: 180px !important
+      height: 24px
+      input
+        height: 24px
+        font-size: 12px
+        border-radius: 24px
+    .search-btn
+      display: block
+      font-size: 12px
+      line-height: 24px
+      color: $color-xs
+      background-color: $btn-bg-n
+      border-radius: 24px
+      min-width: 60px
+      text-align: center
+      cursor: pointer
+      &:hover
+        background-color: $btn-bg-n-hover
+      &.active, &:active
+        background-color: $btn-bg-n-active
+  .table
+    background-color: $bg-color-n
+    min-height: 100%
+    thead > tr > th
+      background: $bg-color-n
+  .pagination-wrap
+    text-align: center
+    li
+      margin-right: 10px
+      border-radius: 32px
+      &>a
+        border-radius: 32px
+.ip-warnning, .port-log
+  @extend .riskwarning
+.change-password
+  padding: 10px
+  background-color: $bg-color-l
+  .form
+    padding-left: 24px
+    border-radius: 4px
+    background-color: $bg-color-n
+    .form-group
+      padding-top: 30px
+      display: flex
+      .form-label
+        position: relative
+        display: block
+        flex: 0 0 98px
+        padding-left: 14px
+        width: 98px
+        font-size: 12px
+        line-height: 30px
+        color: $color-n
+        &::before
+          content: "*"
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          font-size: 12px
+          line-height: 30px
+          color: $error
+      .form-control
+        flex: 0 0 270px
+        width: 270px
+      &.error
+        .form-control
+          border-color: $error
+    .error-msg
+      position: relative
+      margin-bottom: -30px
+      margin-left: 98px
+      padding-left: 22px
+      font-size: 12px
+      line-height: 30px
+      color: $error
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 14px
+        height: 14px
+        margin-top: 8px
+        background: url(../../static/images/danger-icon.png) no-repeat 0 0
+    .action
+      margin-top: 28px
+      margin-left: 98px
+      padding-bottom: 30px
+      width: 270px
+      text-align: center
+      .submit
+        display: inline-block
+        font-size: 12px
+        line-height: 32px
+        background: $btn-bg-n
+        color: $color-xs
+        border-radius: 32px
+        min-width: 100px
+        cursor: pointer
+        &:hover
+          background-color: $btn-bg-n-hover
+        &.active, &:active
+          background-color: $btn-bg-n-active
+
+@keyframes moveProgress
+  0%
+    transform: translateX(0)
+  75%
+    transform: translateX(160px)
+  100%
+    transform: translateX(160px)
+.set-system
+  position: absolute
+  top: 54px
+  left: 150px
+  right: 0
+  bottom: 0
+  display: flex
+  padding: 24px
+  background-color: $bg-color-l
+  min-width: 850px
+  min-height: 400px
+  .wrap
+    position: relative
+    flex: 0 0 260px
+    margin-right: 20px
+    width: 260px
+    height: 202px
+    background-color: $bg-color-n
+    border-radius: 8px
+    border: 1px solid $bg-color-n
+    cursor: pointer
+    &>.icon
+      margin: 16px auto 0
+      width: 60px
+      height: 60px
+      &>img
+        height: 60px
+        overflow: hidden
+      .icon2, .icon3
+        display: none
+      .icon3
+        width: 60px
+    &:hover
+      &>.icon
+        .icon1
+          display: none
+        .icon2
+          display: block
+        .icon3
+          display: none
+    &.active
+      &>.icon
+        .icon1
+          display: none
+        .icon2
+          display: block
+        .icon3
+          display: none
+    .title
+      margin-top: 14px
+      font-size: $font-n
+      line-height: 28px
+      text-align: center
+      color: $color-n
+    .title-success
+      @extend .title
+      display: none
+      color: $color-n
+    .progress
+      display: none
+      margin: 14px auto 0
+      padding-top: 14px
+      padding-bottom: 8px
+      width: 154px
+      .progress-wrap
+        position: relative
+        height: 6px
+        border-radius: 6px
+        background-color: $bg-color-l
+        overflow: hidden
+        &>.progress-bar
+          position: absolute
+          left: 0
+          top: 0
+          width: 100px
+          height: 6px
+          background: url(../../static/images/progress-bar.png) no-repeat 0 0
+          animation: moveProgress 2s linear infinite
+
+    .subtitle
+      font-size: $font-n
+      line-height: 28px
+      text-align: center
+      color: $color-s
+    .time-subtitle
+      @extend .subtitle
+      padding-top: 28px
+      padding-bottom: 14px
+    .btn
+      margin-top: 12px
+      text-align: center
+      &>span
+        display: inline-block
+        width: 120px
+        font-size: $font-n
+        line-height: 30px
+        border-radius: 30px
+        &.btn1
+          background-color: $btn-bg-n
+          color: $color-xs
+          cursor: pointer
+        &.btn2
+          display: none
+          background-color: $btn-bg-n-disabled
+          color: $color-s
+    &.initing
+      &>.icon
+        .icon1
+          display: none
+        .icon2
+          display: block
+      &:hover
+        &>.icon
+          .icon1
+            display: none
+          .icon2
+            display: block
+      &.active
+        &>.icon
+          .icon2
+            display: block
+          .icon3
+            display: none
+      .title
+        display: none
+      .progress
+        display: block
+      .btn
+        .btn1
+          display: none
+        .btn2
+          display: inline-block
+    &.init-success
+      .icon
+        .icon1
+          display: none
+        .icon3
+          display: block
+      &:hover, &.active
+        .icon
+          .icon2
+            display: none
+          .icon3
+            display: block
+      .title
+        display: none
+      .title-success
+        display: block
+      .btn
+        .btn1
+          display: none
+        .btn2
+          display: inline-block
+    &:hover
+      border-color: #95b5ee
+      -webkit-box-shadow: 0 0 15px #95b5ee
+      -moz-box-shadow: 0 0 15px #95b5ee
+      box-shadow: 0 0 15px #95b5ee
+      &>.icon
+        .icon1
+          display: none
+    &.active
+      border-color: #95b5ee
+      -webkit-box-shadow: 0 0 15px #95b5ee
+      -moz-box-shadow: 0 0 15px #95b5ee
+      box-shadow: 0 0 15px #95b5ee
+      &>.icon
+        .icon1
+          display: none
+    .time-form
+      display: none
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 10
+      padding-top: 6px
+      background-color: $bg-color-n
+      border-radius: 8px
+      overflow: hidden
+      .form-group
+        margin-top: 18px
+        display: flex
+        .label
+          flex: 0 0 48px
+          width: 48px
+          font-size: $font-n
+          line-height: 30px
+          color: $color-n
+          text-align: right
+        .form-control
+          width: 180px
+          margin-left: 5px
+          border-color: $border-color-l
+      .tip-message
+        visibility: hidden
+        margin-left: 49px
+        padding-top: 14px
+        font-size: $font-n
+        line-height: 28px
+        width: 180px
+        height: 42px
+        text-align: center
+        color: $color-n
+        &.success
+          visibility: visible
+        &.error
+          visibility: visible
+          color: $error
+      .action
+        margin-top: 12px
+        text-align: center
+        .save-btn
+          display: inline-block
+          width: 120px
+          font-size: $font-n
+          line-height: 30px
+          border-radius: 30px
+          color: $color-xs
+          background-color: $btn-bg-n
+          &:hover
+            background-color: $btn-bg-n-hover
+          &:active, &.active
+            background-color: $btn-bg-n-active
+          &.disabled
+            background-color: $btn-bg-n-disabled
+            color: $color-s
+            &:hover
+              background-color: $btn-bg-n-disabled
+              color: $color-s
+            &:active
+              background-color: $btn-bg-n-disabled
+              color: $color-s
+      &.initing
+        display: block
+
+
+
