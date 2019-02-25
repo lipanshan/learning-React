@@ -93,11 +93,26 @@ export default class home extends Component {
             </div>
           </div>
         </div>
-        <div className="network-chart" ref="lineChartWrap"></div>
-        <div className="chart-row">
-          <div className="cpu-chart" ref="cpuChartWrap"></div>
-          <div className="pie-chart" ref="harddiskChartWrap"></div>
-          <div className="pie-chart" ref="memoryChartWrap"></div>
+        <div className="chart-row2">
+          <h2>网卡流量数据</h2>
+          <div className="network-chart" ref="lineChartWrap"></div>
+        </div>
+        <div className="chart-row3">
+          <div className="cpu-chart">
+            <h2>CPU</h2>
+            <div className="cpu" ref="cpuChartWrap">
+            </div>
+          </div>
+          <div className="harddisk-chart">
+            <h2>硬盘</h2>
+            <div className="harddisk" ref="harddiskChartWrap">
+            </div>
+          </div>
+          <div className="memory-chart">
+            <h2>内存</h2>
+            <div className="memory" ref="memoryChartWrap">
+            </div>
+          </div>
         </div>
       </div>
     )

@@ -198,11 +198,11 @@ export default class Portlog extends Component {
   getInfo (param) {
     getPortLog('', param).then((res) => {
       if (res.ret === 200) {
-        console.log(res)
         this.setState({
           tableData: res.data.list,
           queryParam: Object.assign({}, this.state.queryParam, {
-            pageNum: res.data.pageNum
+            pageNum: res.data.pageNum,
+            pageIndex: res.data.pageIndex
           })
         })
       } else if (res.ret === 499) {

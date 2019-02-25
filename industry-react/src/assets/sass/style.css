@@ -95,7 +95,7 @@
         .login .login-content .form .form-group .input-wrap {
           flex: 1;
           border-radius: 4px; }
-          .login .login-content .form .form-group .input-wrap > input {
+          .login .login-content .form .form-group .input-wrap > input, .login .login-content .form .setnetwork .form-group .my-input.input-wrap > .input, .setnetwork .login .login-content .form .form-group .my-input.input-wrap > .input {
             box-sizing: border-box;
             width: 100%;
             height: 30px;
@@ -104,7 +104,7 @@
             line-height: 30px;
             border: 1px solid #d6d6d6;
             border-radius: 4px; }
-            .login .login-content .form .form-group .input-wrap > input:focus {
+            .login .login-content .form .form-group .input-wrap > input:focus, .login .login-content .form .setnetwork .form-group .my-input.input-wrap > .input:focus, .setnetwork .login .login-content .form .form-group .my-input.input-wrap > .input:focus {
               border-radius: 4px; }
         .login .login-content .form .form-group .vcode-input {
           width: 120px; }
@@ -122,7 +122,7 @@
             border-radius: 4px;
             text-align: center;
             background: url(../../static/images/refresh.png) no-repeat 6px 6px #efefef; }
-        .login .login-content .form .form-group .error-cls input {
+        .login .login-content .form .form-group .error-cls input, .login .login-content .form .setnetwork .form-group .error-cls .my-input > .input, .setnetwork .login .login-content .form .form-group .error-cls .my-input > .input {
           border: 1px solid #ff0000 !important; }
         .login .login-content .form .form-group .error-message {
           position: absolute;
@@ -200,7 +200,7 @@
         width: 18px;
         height: 18px;
         background: url(../../static/images/menu-icons.png) no-repeat 0 100px; }
-      .menu .menu-list .menu-content .item .menu-txt > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt > .title-success {
+      .menu .menu-list .menu-content .item .menu-txt > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt > .title-success, .menu .menu-list .menu-content .item .set-wrap .wrap .menu-txt > .title-success, .set-wrap .wrap .menu .menu-list .menu-content .item .menu-txt > .title-success {
         flex: 1;
         margin-left: 12px;
         font-size: 14px;
@@ -244,15 +244,15 @@
         background-position: -61px -100px; }
       .menu .menu-list .menu-content .item .menu-txt.menu5.active > .left-icon, .menu .menu-list .menu-content .item .menu-txt.menu5:active > .left-icon {
         background-position: -121px -100px; }
-      .menu .menu-list .menu-content .item .menu-txt:hover > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt:hover > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt:hover > .title-success {
+      .menu .menu-list .menu-content .item .menu-txt:hover > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt:hover > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt:hover > .title-success, .menu .menu-list .menu-content .item .set-wrap .wrap .menu-txt:hover > .title-success, .set-wrap .wrap .menu .menu-list .menu-content .item .menu-txt:hover > .title-success {
         color: #4381e6; }
       .menu .menu-list .menu-content .item .menu-txt.active .left-icon, .menu .menu-list .menu-content .item .menu-txt:active .left-icon {
         background-position-x: -120px; }
-      .menu .menu-list .menu-content .item .menu-txt.active > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt.active > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt.active > .title-success, .menu .menu-list .menu-content .item .menu-txt:active > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt:active > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt:active > .title-success {
+      .menu .menu-list .menu-content .item .menu-txt.active > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt.active > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt.active > .title-success, .menu .menu-list .menu-content .item .set-wrap .wrap .menu-txt.active > .title-success, .set-wrap .wrap .menu .menu-list .menu-content .item .menu-txt.active > .title-success, .menu .menu-list .menu-content .item .menu-txt:active > .title, .menu .menu-list .menu-content .item .set-system .wrap .menu-txt:active > .title-success, .set-system .wrap .menu .menu-list .menu-content .item .menu-txt:active > .title-success, .menu .menu-list .menu-content .item .set-wrap .wrap .menu-txt:active > .title-success, .set-wrap .wrap .menu .menu-list .menu-content .item .menu-txt:active > .title-success {
         color: #4381e6; }
     .menu .menu-list .menu-content.hide {
       display: none; }
-  .menu .version-info > .title, .menu .set-system .wrap .version-info > .title-success, .set-system .wrap .menu .version-info > .title-success {
+  .menu .version-info > .title, .menu .set-system .wrap .version-info > .title-success, .set-system .wrap .menu .version-info > .title-success, .menu .set-wrap .wrap .version-info > .title-success, .set-wrap .wrap .menu .version-info > .title-success {
     margin: 0 auto;
     width: 100px;
     font-size: 14px;
@@ -261,7 +261,7 @@
     border: 1px solid #666;
     border-radius: 4px;
     color: #3d74cf; }
-  .menu .version-info > .subtitle, .menu .version-info > .txt, .menu .set-system .wrap .version-info > .time-subtitle, .set-system .wrap .menu .version-info > .time-subtitle {
+  .menu .version-info > .subtitle, .menu .version-info > .txt, .menu .set-system .wrap .version-info > .time-subtitle, .set-system .wrap .menu .version-info > .time-subtitle, .menu .set-wrap .wrap .version-info > .time-subtitle, .set-wrap .wrap .menu .version-info > .time-subtitle {
     margin-top: 4px;
     font-size: 12px;
     line-height: 20px;
@@ -365,12 +365,12 @@
       .home-wrap .data .column1 > .txt, .home-wrap .data .column2 > .txt {
         padding-top: 8px;
         flex: 1; }
-        .home-wrap .data .column1 > .txt .title, .home-wrap .data .column2 > .txt .title, .home-wrap .data .column1 > .txt .set-system .wrap .title-success, .set-system .wrap .home-wrap .data .column1 > .txt .title-success, .home-wrap .data .column2 > .txt .set-system .wrap .title-success, .set-system .wrap .home-wrap .data .column2 > .txt .title-success {
+        .home-wrap .data .column1 > .txt .title, .home-wrap .data .column2 > .txt .title, .home-wrap .data .column1 > .txt .set-system .wrap .title-success, .set-system .wrap .home-wrap .data .column1 > .txt .title-success, .home-wrap .data .column2 > .txt .set-system .wrap .title-success, .set-system .wrap .home-wrap .data .column2 > .txt .title-success, .home-wrap .data .column1 > .txt .set-wrap .wrap .title-success, .set-wrap .wrap .home-wrap .data .column1 > .txt .title-success, .home-wrap .data .column2 > .txt .set-wrap .wrap .title-success, .set-wrap .wrap .home-wrap .data .column2 > .txt .title-success {
           padding: 3px 0;
           font-size: 12px;
           line-height: 14px;
           text-align: center; }
-          .home-wrap .data .column1 > .txt .title:before, .home-wrap .data .column2 > .txt .title:before, .home-wrap .data .column1 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column1 > .txt .title-success:before, .home-wrap .data .column2 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column2 > .txt .title-success:before {
+          .home-wrap .data .column1 > .txt .title:before, .home-wrap .data .column2 > .txt .title:before, .home-wrap .data .column1 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column1 > .txt .title-success:before, .home-wrap .data .column2 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column2 > .txt .title-success:before, .home-wrap .data .column1 > .txt .set-wrap .wrap .title-success:before, .set-wrap .wrap .home-wrap .data .column1 > .txt .title-success:before, .home-wrap .data .column2 > .txt .set-wrap .wrap .title-success:before, .set-wrap .wrap .home-wrap .data .column2 > .txt .title-success:before {
             content: "";
             margin-right: 6px;
             display: inline-block;
@@ -404,7 +404,7 @@
           font-size: 12px;
           line-height: 48px;
           color: #333; }
-      .home-wrap .data .column2 > .txt .title:before, .home-wrap .data .column2 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column2 > .txt .title-success:before {
+      .home-wrap .data .column2 > .txt .title:before, .home-wrap .data .column2 > .txt .set-system .wrap .title-success:before, .set-system .wrap .home-wrap .data .column2 > .txt .title-success:before, .home-wrap .data .column2 > .txt .set-wrap .wrap .title-success:before, .set-wrap .wrap .home-wrap .data .column2 > .txt .title-success:before {
         width: 16px;
         height: 16px;
         background: url(../../static/images/tcp-icon.png) no-repeat 0 0; }
@@ -428,6 +428,53 @@
       flex: 23; }
       .home-wrap .chart-row .pie-chart:last-child {
         margin-right: 0; }
+  .home-wrap .chart-row2 {
+    margin-top: 10px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 8px; }
+    .home-wrap .chart-row2 > h2 {
+      margin: 0;
+      padding-top: 6px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #333; }
+    .home-wrap .chart-row2 .chart {
+      width: 100%;
+      height: 245px; }
+  .home-wrap .chart-row3 {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: flex; }
+    .home-wrap .chart-row3 .cpu-chart, .home-wrap .chart-row3 .chart-row .pie-chart, .home-wrap .chart-row .chart-row3 .pie-chart {
+      padding: 0 20px;
+      flex: 33;
+      background-color: #fff;
+      border-radius: 8px; }
+      .home-wrap .chart-row3 .cpu-chart > h2, .home-wrap .chart-row3 .chart-row .pie-chart > h2, .home-wrap .chart-row .chart-row3 .pie-chart > h2 {
+        margin: 0;
+        padding-top: 6px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #333; }
+      .home-wrap .chart-row3 .cpu-chart .cpu, .home-wrap .chart-row3 .chart-row .pie-chart .cpu, .home-wrap .chart-row .chart-row3 .pie-chart .cpu {
+        width: 100%;
+        height: 272px; }
+    .home-wrap .chart-row3 .harddisk-chart, .home-wrap .chart-row3 .memory-chart {
+      margin-left: 10px;
+      padding: 0 20px;
+      flex: 20;
+      background-color: #fff;
+      border-radius: 8px; }
+      .home-wrap .chart-row3 .harddisk-chart h2, .home-wrap .chart-row3 .memory-chart h2 {
+        margin: 0;
+        padding-top: 6px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #333; }
+      .home-wrap .chart-row3 .harddisk-chart .memory, .home-wrap .chart-row3 .harddisk-chart .harddisk, .home-wrap .chart-row3 .memory-chart .memory, .home-wrap .chart-row3 .memory-chart .harddisk {
+        width: 100%;
+        height: 272px; }
 
 .riskwarning, .ip-warnning, .port-log {
   padding: 10px;
@@ -439,7 +486,7 @@
     border-top-right-radius: 8px;
     background-color: #fff;
     border-bottom: 1px solid #d6d6d6; }
-    .riskwarning .search-wrap .title, .ip-warnning .search-wrap .title, .port-log .search-wrap .title, .riskwarning .search-wrap .set-system .wrap .title-success, .set-system .wrap .riskwarning .search-wrap .title-success, .ip-warnning .search-wrap .set-system .wrap .title-success, .set-system .wrap .ip-warnning .search-wrap .title-success, .port-log .search-wrap .set-system .wrap .title-success, .set-system .wrap .port-log .search-wrap .title-success {
+    .riskwarning .search-wrap .title, .ip-warnning .search-wrap .title, .port-log .search-wrap .title, .riskwarning .search-wrap .set-system .wrap .title-success, .set-system .wrap .riskwarning .search-wrap .title-success, .ip-warnning .search-wrap .set-system .wrap .title-success, .set-system .wrap .ip-warnning .search-wrap .title-success, .port-log .search-wrap .set-system .wrap .title-success, .set-system .wrap .port-log .search-wrap .title-success, .riskwarning .search-wrap .set-wrap .wrap .title-success, .set-wrap .wrap .riskwarning .search-wrap .title-success, .ip-warnning .search-wrap .set-wrap .wrap .title-success, .set-wrap .wrap .ip-warnning .search-wrap .title-success, .port-log .search-wrap .set-wrap .wrap .title-success, .set-wrap .wrap .port-log .search-wrap .title-success {
       margin-right: 10px;
       display: block;
       font-size: 12px;
@@ -467,7 +514,7 @@
       .riskwarning .search-wrap .select > div:nth-child(3), .ip-warnning .search-wrap .select > div:nth-child(3), .port-log .search-wrap .select > div:nth-child(3) {
         min-width: 120px;
         white-space: nowrap; }
-    .riskwarning .search-wrap .search-input, .ip-warnning .search-wrap .search-input, .port-log .search-wrap .search-input, .riskwarning .search-wrap .time-input > input, .ip-warnning .search-wrap .time-input > input, .port-log .search-wrap .time-input > input {
+    .riskwarning .search-wrap .search-input, .ip-warnning .search-wrap .search-input, .port-log .search-wrap .search-input, .riskwarning .search-wrap .time-input > input, .ip-warnning .search-wrap .time-input > input, .port-log .search-wrap .time-input > input, .riskwarning .search-wrap .setnetwork .form-group .my-input.time-input > .input, .setnetwork .form-group .riskwarning .search-wrap .my-input.time-input > .input, .ip-warnning .search-wrap .setnetwork .form-group .my-input.time-input > .input, .setnetwork .form-group .ip-warnning .search-wrap .my-input.time-input > .input, .port-log .search-wrap .setnetwork .form-group .my-input.time-input > .input, .setnetwork .form-group .port-log .search-wrap .my-input.time-input > .input {
       margin-right: 8px;
       padding: 4px 15px;
       width: 164px;
@@ -476,14 +523,14 @@
       line-height: 16px;
       height: 24px;
       border: 1px solid #999; }
-      .riskwarning .search-wrap .search-input:focus, .ip-warnning .search-wrap .search-input:focus, .port-log .search-wrap .search-input:focus, .riskwarning .search-wrap .time-input > input:focus, .ip-warnning .search-wrap .time-input > input:focus, .port-log .search-wrap .time-input > input:focus {
+      .riskwarning .search-wrap .search-input:focus, .ip-warnning .search-wrap .search-input:focus, .port-log .search-wrap .search-input:focus, .riskwarning .search-wrap .time-input > input:focus, .ip-warnning .search-wrap .time-input > input:focus, .port-log .search-wrap .time-input > input:focus, .riskwarning .search-wrap .setnetwork .form-group .my-input.time-input > .input:focus, .setnetwork .form-group .riskwarning .search-wrap .my-input.time-input > .input:focus, .ip-warnning .search-wrap .setnetwork .form-group .my-input.time-input > .input:focus, .setnetwork .form-group .ip-warnning .search-wrap .my-input.time-input > .input:focus, .port-log .search-wrap .setnetwork .form-group .my-input.time-input > .input:focus, .setnetwork .form-group .port-log .search-wrap .my-input.time-input > .input:focus {
         outline: none;
         border-color: #2684FF; }
     .riskwarning .search-wrap .datepicker-wrap, .ip-warnning .search-wrap .datepicker-wrap, .port-log .search-wrap .datepicker-wrap {
       margin-right: 10px;
       width: 180px !important;
       height: 24px; }
-      .riskwarning .search-wrap .datepicker-wrap input, .ip-warnning .search-wrap .datepicker-wrap input, .port-log .search-wrap .datepicker-wrap input {
+      .riskwarning .search-wrap .datepicker-wrap input, .ip-warnning .search-wrap .datepicker-wrap input, .port-log .search-wrap .datepicker-wrap input, .riskwarning .search-wrap .datepicker-wrap .setnetwork .form-group .my-input > .input, .setnetwork .form-group .riskwarning .search-wrap .datepicker-wrap .my-input > .input, .ip-warnning .search-wrap .datepicker-wrap .setnetwork .form-group .my-input > .input, .setnetwork .form-group .ip-warnning .search-wrap .datepicker-wrap .my-input > .input, .port-log .search-wrap .datepicker-wrap .setnetwork .form-group .my-input > .input, .setnetwork .form-group .port-log .search-wrap .datepicker-wrap .my-input > .input {
         height: 24px;
         font-size: 12px;
         border-radius: 24px; }
@@ -592,7 +639,7 @@
     transform: translateX(160px); }
   100% {
     transform: translateX(160px); } }
-.set-system {
+.set-system, .set-wrap {
   position: absolute;
   top: 54px;
   left: 150px;
@@ -603,7 +650,7 @@
   background-color: #ebecf1;
   min-width: 850px;
   min-height: 400px; }
-  .set-system .wrap {
+  .set-system .wrap, .set-wrap .wrap {
     position: relative;
     flex: 0 0 260px;
     margin-right: 20px;
@@ -613,51 +660,51 @@
     border-radius: 8px;
     border: 1px solid #fff;
     cursor: pointer; }
-    .set-system .wrap > .icon {
+    .set-system .wrap > .icon, .set-wrap .wrap > .icon {
       margin: 16px auto 0;
       width: 60px;
       height: 60px; }
-      .set-system .wrap > .icon > img {
+      .set-system .wrap > .icon > img, .set-wrap .wrap > .icon > img {
         height: 60px;
         overflow: hidden; }
-      .set-system .wrap > .icon .icon2, .set-system .wrap > .icon .icon3 {
+      .set-system .wrap > .icon .icon2, .set-system .wrap > .icon .icon3, .set-wrap .wrap > .icon .icon2, .set-wrap .wrap > .icon .icon3 {
         display: none; }
-      .set-system .wrap > .icon .icon3 {
+      .set-system .wrap > .icon .icon3, .set-wrap .wrap > .icon .icon3 {
         width: 60px; }
-    .set-system .wrap:hover > .icon .icon1 {
+    .set-system .wrap:hover > .icon .icon1, .set-wrap .wrap:hover > .icon .icon1 {
       display: none; }
-    .set-system .wrap:hover > .icon .icon2 {
+    .set-system .wrap:hover > .icon .icon2, .set-wrap .wrap:hover > .icon .icon2 {
       display: block; }
-    .set-system .wrap:hover > .icon .icon3 {
+    .set-system .wrap:hover > .icon .icon3, .set-wrap .wrap:hover > .icon .icon3 {
       display: none; }
-    .set-system .wrap.active > .icon .icon1 {
+    .set-system .wrap.active > .icon .icon1, .set-wrap .wrap.active > .icon .icon1 {
       display: none; }
-    .set-system .wrap.active > .icon .icon2 {
+    .set-system .wrap.active > .icon .icon2, .set-wrap .wrap.active > .icon .icon2 {
       display: block; }
-    .set-system .wrap.active > .icon .icon3 {
+    .set-system .wrap.active > .icon .icon3, .set-wrap .wrap.active > .icon .icon3 {
       display: none; }
-    .set-system .wrap .title, .set-system .wrap .title-success {
+    .set-system .wrap .title, .set-system .wrap .title-success, .set-wrap .wrap .title, .set-wrap .wrap .title-success {
       margin-top: 14px;
       font-size: 12px;
       line-height: 28px;
       text-align: center;
       color: #333; }
-    .set-system .wrap .title-success {
+    .set-system .wrap .title-success, .set-wrap .wrap .title-success {
       display: none;
       color: #333; }
-    .set-system .wrap .progress {
+    .set-system .wrap .progress, .set-wrap .wrap .progress {
       display: none;
       margin: 14px auto 0;
       padding-top: 14px;
       padding-bottom: 8px;
       width: 154px; }
-      .set-system .wrap .progress .progress-wrap {
+      .set-system .wrap .progress .progress-wrap, .set-wrap .wrap .progress .progress-wrap {
         position: relative;
         height: 6px;
         border-radius: 6px;
         background-color: #ebecf1;
         overflow: hidden; }
-        .set-system .wrap .progress .progress-wrap > .progress-bar {
+        .set-system .wrap .progress .progress-wrap > .progress-bar, .set-wrap .wrap .progress .progress-wrap > .progress-bar {
           position: absolute;
           left: 0;
           top: 0;
@@ -665,82 +712,82 @@
           height: 6px;
           background: url(../../static/images/progress-bar.png) no-repeat 0 0;
           animation: moveProgress 2s linear infinite; }
-    .set-system .wrap .subtitle, .set-system .wrap .menu .version-info > .txt, .menu .set-system .wrap .version-info > .txt, .set-system .wrap .time-subtitle {
+    .set-system .wrap .subtitle, .set-system .wrap .menu .version-info > .txt, .menu .set-system .wrap .version-info > .txt, .set-system .wrap .time-subtitle, .set-wrap .wrap .subtitle, .set-wrap .wrap .menu .version-info > .txt, .menu .set-wrap .wrap .version-info > .txt, .set-wrap .wrap .time-subtitle {
       font-size: 12px;
       line-height: 28px;
       text-align: center;
       color: #999; }
-    .set-system .wrap .time-subtitle {
+    .set-system .wrap .time-subtitle, .set-wrap .wrap .time-subtitle {
       padding-top: 28px;
       padding-bottom: 14px; }
-    .set-system .wrap .btn {
+    .set-system .wrap .btn, .set-wrap .wrap .btn {
       margin-top: 12px;
       text-align: center; }
-      .set-system .wrap .btn > span {
+      .set-system .wrap .btn > span, .set-wrap .wrap .btn > span {
         display: inline-block;
         width: 120px;
         font-size: 12px;
         line-height: 30px;
         border-radius: 30px; }
-        .set-system .wrap .btn > span.btn1 {
+        .set-system .wrap .btn > span.btn1, .set-wrap .wrap .btn > span.btn1 {
           background-color: #4381e6;
           color: #fff;
           cursor: pointer; }
-        .set-system .wrap .btn > span.btn2 {
+        .set-system .wrap .btn > span.btn2, .set-wrap .wrap .btn > span.btn2 {
           display: none;
           background-color: #eeeff4;
           color: #999; }
-    .set-system .wrap.initing > .icon .icon1 {
+    .set-system .wrap.initing > .icon .icon1, .set-wrap .wrap.initing > .icon .icon1 {
       display: none; }
-    .set-system .wrap.initing > .icon .icon2 {
+    .set-system .wrap.initing > .icon .icon2, .set-wrap .wrap.initing > .icon .icon2 {
       display: block; }
-    .set-system .wrap.initing:hover > .icon .icon1 {
+    .set-system .wrap.initing:hover > .icon .icon1, .set-wrap .wrap.initing:hover > .icon .icon1 {
       display: none; }
-    .set-system .wrap.initing:hover > .icon .icon2 {
+    .set-system .wrap.initing:hover > .icon .icon2, .set-wrap .wrap.initing:hover > .icon .icon2 {
       display: block; }
-    .set-system .wrap.initing.active > .icon .icon2 {
+    .set-system .wrap.initing.active > .icon .icon2, .set-wrap .wrap.initing.active > .icon .icon2 {
       display: block; }
-    .set-system .wrap.initing.active > .icon .icon3 {
+    .set-system .wrap.initing.active > .icon .icon3, .set-wrap .wrap.initing.active > .icon .icon3 {
       display: none; }
-    .set-system .wrap.initing .title, .set-system .wrap.initing .title-success {
+    .set-system .wrap.initing .title, .set-system .wrap.initing .title-success, .set-wrap .wrap.initing .title, .set-wrap .wrap.initing .title-success {
       display: none; }
-    .set-system .wrap.initing .progress {
+    .set-system .wrap.initing .progress, .set-wrap .wrap.initing .progress {
       display: block; }
-    .set-system .wrap.initing .btn .btn1 {
+    .set-system .wrap.initing .btn .btn1, .set-wrap .wrap.initing .btn .btn1 {
       display: none; }
-    .set-system .wrap.initing .btn .btn2 {
+    .set-system .wrap.initing .btn .btn2, .set-wrap .wrap.initing .btn .btn2 {
       display: inline-block; }
-    .set-system .wrap.init-success .icon .icon1 {
+    .set-system .wrap.init-success .icon .icon1, .set-wrap .wrap.init-success .icon .icon1 {
       display: none; }
-    .set-system .wrap.init-success .icon .icon3 {
+    .set-system .wrap.init-success .icon .icon3, .set-wrap .wrap.init-success .icon .icon3 {
       display: block; }
-    .set-system .wrap.init-success:hover .icon .icon2, .set-system .wrap.init-success.active .icon .icon2 {
+    .set-system .wrap.init-success:hover .icon .icon2, .set-system .wrap.init-success.active .icon .icon2, .set-wrap .wrap.init-success:hover .icon .icon2, .set-wrap .wrap.init-success.active .icon .icon2 {
       display: none; }
-    .set-system .wrap.init-success:hover .icon .icon3, .set-system .wrap.init-success.active .icon .icon3 {
+    .set-system .wrap.init-success:hover .icon .icon3, .set-system .wrap.init-success.active .icon .icon3, .set-wrap .wrap.init-success:hover .icon .icon3, .set-wrap .wrap.init-success.active .icon .icon3 {
       display: block; }
-    .set-system .wrap.init-success .title, .set-system .wrap.init-success .title-success {
+    .set-system .wrap.init-success .title, .set-system .wrap.init-success .title-success, .set-wrap .wrap.init-success .title, .set-wrap .wrap.init-success .title-success {
       display: none; }
-    .set-system .wrap.init-success .title-success {
+    .set-system .wrap.init-success .title-success, .set-wrap .wrap.init-success .title-success {
       display: block; }
-    .set-system .wrap.init-success .btn .btn1 {
+    .set-system .wrap.init-success .btn .btn1, .set-wrap .wrap.init-success .btn .btn1 {
       display: none; }
-    .set-system .wrap.init-success .btn .btn2 {
+    .set-system .wrap.init-success .btn .btn2, .set-wrap .wrap.init-success .btn .btn2 {
       display: inline-block; }
-    .set-system .wrap:hover {
+    .set-system .wrap:hover, .set-wrap .wrap:hover {
       border-color: #95b5ee;
       -webkit-box-shadow: 0 0 15px #95b5ee;
       -moz-box-shadow: 0 0 15px #95b5ee;
       box-shadow: 0 0 15px #95b5ee; }
-      .set-system .wrap:hover > .icon .icon1 {
+      .set-system .wrap:hover > .icon .icon1, .set-wrap .wrap:hover > .icon .icon1 {
         display: none; }
-    .set-system .wrap.active {
+    .set-system .wrap.active, .set-wrap .wrap.active {
       border-color: #95b5ee;
       -webkit-box-shadow: 0 0 15px #95b5ee;
       -moz-box-shadow: 0 0 15px #95b5ee;
       box-shadow: 0 0 15px #95b5ee; }
-      .set-system .wrap.active > .icon .icon1 {
+      .set-system .wrap.active > .icon .icon1, .set-wrap .wrap.active > .icon .icon1 {
         display: none; }
-    .set-system .wrap .time-form {
+    .set-system .wrap .time-form, .set-wrap .wrap .time-form {
       display: none;
       position: absolute;
       top: 0;
@@ -752,21 +799,21 @@
       background-color: #fff;
       border-radius: 8px;
       overflow: hidden; }
-      .set-system .wrap .time-form .form-group {
+      .set-system .wrap .time-form .form-group, .set-wrap .wrap .time-form .form-group {
         margin-top: 18px;
         display: flex; }
-        .set-system .wrap .time-form .form-group .label {
+        .set-system .wrap .time-form .form-group .label, .set-wrap .wrap .time-form .form-group .label {
           flex: 0 0 48px;
           width: 48px;
           font-size: 12px;
           line-height: 30px;
           color: #333;
           text-align: right; }
-        .set-system .wrap .time-form .form-group .form-control {
+        .set-system .wrap .time-form .form-group .form-control, .set-wrap .wrap .time-form .form-group .form-control {
           width: 180px;
           margin-left: 5px;
           border-color: #999; }
-      .set-system .wrap .time-form .tip-message {
+      .set-system .wrap .time-form .tip-message, .set-wrap .wrap .time-form .tip-message {
         visibility: hidden;
         margin-left: 49px;
         padding-top: 14px;
@@ -776,15 +823,15 @@
         height: 42px;
         text-align: center;
         color: #333; }
-        .set-system .wrap .time-form .tip-message.success {
+        .set-system .wrap .time-form .tip-message.success, .set-wrap .wrap .time-form .tip-message.success {
           visibility: visible; }
-        .set-system .wrap .time-form .tip-message.error {
+        .set-system .wrap .time-form .tip-message.error, .set-wrap .wrap .time-form .tip-message.error {
           visibility: visible;
           color: #ff0000; }
-      .set-system .wrap .time-form .action {
+      .set-system .wrap .time-form .action, .set-wrap .wrap .time-form .action {
         margin-top: 12px;
         text-align: center; }
-        .set-system .wrap .time-form .action .save-btn {
+        .set-system .wrap .time-form .action .save-btn, .set-wrap .wrap .time-form .action .save-btn {
           display: inline-block;
           width: 120px;
           font-size: 12px;
@@ -792,20 +839,298 @@
           border-radius: 30px;
           color: #fff;
           background-color: #4381e6; }
-          .set-system .wrap .time-form .action .save-btn:hover {
+          .set-system .wrap .time-form .action .save-btn:hover, .set-wrap .wrap .time-form .action .save-btn:hover {
             background-color: #4f8ff3; }
-          .set-system .wrap .time-form .action .save-btn:active, .set-system .wrap .time-form .action .save-btn.active {
+          .set-system .wrap .time-form .action .save-btn:active, .set-system .wrap .time-form .action .save-btn.active, .set-wrap .wrap .time-form .action .save-btn:active, .set-wrap .wrap .time-form .action .save-btn.active {
             background-color: #3d74cf; }
-          .set-system .wrap .time-form .action .save-btn.disabled {
+          .set-system .wrap .time-form .action .save-btn.disabled, .set-wrap .wrap .time-form .action .save-btn.disabled {
             background-color: #eeeff4;
             color: #999; }
-            .set-system .wrap .time-form .action .save-btn.disabled:hover {
+            .set-system .wrap .time-form .action .save-btn.disabled:hover, .set-wrap .wrap .time-form .action .save-btn.disabled:hover {
               background-color: #eeeff4;
               color: #999; }
-            .set-system .wrap .time-form .action .save-btn.disabled:active {
+            .set-system .wrap .time-form .action .save-btn.disabled:active, .set-wrap .wrap .time-form .action .save-btn.disabled:active {
               background-color: #eeeff4;
               color: #999; }
-      .set-system .wrap .time-form.initing {
+      .set-system .wrap .time-form.initing, .set-wrap .wrap .time-form.initing {
         display: block; }
+
+.set-wrap {
+  display: block; }
+  .set-wrap > h2 {
+    padding-top: 18px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #333; }
+    .set-wrap > h2 > .reqire {
+      margin-right: 5px;
+      color: #ff0000; }
+  .set-wrap > .form-group {
+    display: flex; }
+    .set-wrap > .form-group .update-btn {
+      margin-left: 10px;
+      padding: 0 5px;
+      min-height: 28px;
+      width: 358px;
+      font-size: 12px;
+      line-height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      white-space: nowrap;
+      overflow: hidden; }
+    .set-wrap > .form-group > .input {
+      position: relative;
+      width: 92px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 28px;
+      border: 1px solid #295dd5;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #295dd5;
+      overflow: hidden;
+      cursor: pointer; }
+      .set-wrap > .form-group > .input > input, .setnetwork .set-wrap > .form-group > .my-input.input > .input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 400px;
+        line-height: 400px;
+        z-index: 10;
+        opacity: 0; }
+      .set-wrap > .form-group > .input span {
+        font-size: 12px;
+        line-height: 28px;
+        color: #295dd5;
+        cursor: pointer; }
+
+.setnetwork {
+  padding: 0 22px;
+  border-radius: 4px; }
+  .setnetwork .form-group {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center; }
+    .setnetwork .form-group.paddingt22 {
+      padding-top: 22px; }
+    .setnetwork .form-group.paddingt30 {
+      padding-top: 30px; }
+    .setnetwork .form-group.paddingb30 {
+      padding-bottom: 30px; }
+    .setnetwork .form-group .label-txt {
+      position: relative;
+      flex: 0 0 78px;
+      padding-left: 8px;
+      font-size: 12px;
+      line-height: 30px;
+      color: #333;
+      width: 78px; }
+      .setnetwork .form-group .label-txt .require-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        color: #ff0000; }
+    .setnetwork .form-group .network-wrap {
+      display: flex;
+      flex: 1; }
+      .setnetwork .form-group .network-wrap .network {
+        position: relative;
+        padding-left: 50px;
+        display: flex;
+        flex: 0 0 160px;
+        margin-right: 18px;
+        height: 56px;
+        border: 1px solid #999;
+        border-radius: 8px;
+        box-shadow: 0 0 4px #c9c9c9;
+        cursor: pointer; }
+        .setnetwork .form-group .network-wrap .network .name {
+          padding: 0;
+          margin-top: auto;
+          margin-bottom: auto;
+          font-size: 12px;
+          line-height: 54px;
+          color: #333; }
+          .setnetwork .form-group .network-wrap .network .name::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 15px 10px 0 10px;
+            display: block;
+            width: 31px;
+            height: 27px;
+            background: url(../../static/images/network-icon1.png) no-repeat 0 0; }
+        .setnetwork .form-group .network-wrap .network:hover, .setnetwork .form-group .network-wrap .network:focus {
+          box-shadow: 0 0 4px #4381e6; }
+        .setnetwork .form-group .network-wrap .network.active {
+          border-color: #295dd5;
+          box-shadow: 0 0 4px #4381e6; }
+          .setnetwork .form-group .network-wrap .network.active .name::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 15px 10px 0 10px;
+            display: block;
+            width: 31px;
+            height: 27px;
+            background: url(../../static/images/network-icon1-active.png) no-repeat 0 0; }
+        .setnetwork .form-group .network-wrap .network.unconnect .name::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          margin: 15px 10px 0 10px;
+          display: block;
+          width: 31px;
+          height: 27px;
+          background: url(../../static/images/network-icon2.png) no-repeat 0 0; }
+        .setnetwork .form-group .network-wrap .network.unconnect:hover, .setnetwork .form-group .network-wrap .network.unconnect:focus {
+          box-shadow: 0 0 4px #4381e6; }
+        .setnetwork .form-group .network-wrap .network.unconnect.active {
+          border-color: #295dd5;
+          box-shadow: 0 0 4px #4381e6; }
+          .setnetwork .form-group .network-wrap .network.unconnect.active .name::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 15px 10px 0 10px;
+            display: block;
+            width: 31px;
+            height: 27px;
+            background: url(../../static/images/network-icon2-active.png) no-repeat 0 0; }
+    .setnetwork .form-group .radio-group {
+      display: flex; }
+      .setnetwork .form-group .radio-group > label {
+        display: block;
+        margin: 0 24px 0 0;
+        font-size: 0;
+        cursor: pointer; }
+        .setnetwork .form-group .radio-group > label .at-radio__inner {
+          border-color: #949494; }
+          .setnetwork .form-group .radio-group > label .at-radio__inner:after {
+            background-color: #616161; }
+        .setnetwork .form-group .radio-group > label > input, .setnetwork .form-group .radio-group > label.my-input > .input {
+          margin: 0 5px 0 10px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 16px;
+          height: 16px; }
+        .setnetwork .form-group .radio-group > label > span {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 12px;
+          color: #333; }
+    .setnetwork .form-group .input-groups {
+      width: 160px; }
+    .setnetwork .form-group .my-input {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0;
+      white-space: nowrap; }
+      .setnetwork .form-group .my-input > .input {
+        flex: 1;
+        border-radius: 5px;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 6px 4px;
+        text-align: center; }
+        .setnetwork .form-group .my-input > .input > input, .setnetwork .form-group .my-input > .my-input.input > .input {
+          display: block;
+          padding: 0;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: center; }
+      .setnetwork .form-group .my-input .point {
+        display: block;
+        margin-top: 14px;
+        flex: 0 0 2px;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #333; }
+      .setnetwork .form-group .my-input.focus {
+        box-shadow: 0 0 4px #dedcdd; }
+      .setnetwork .form-group .my-input.error {
+        border-color: #ff0000;
+        box-shadow: 0 0 4px #dedcdd; }
+      .setnetwork .form-group .my-input.hide {
+        display: none; }
+      .setnetwork .form-group .my-input .error-message {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        font-size: 12px;
+        line-height: 24px;
+        color: #ff0000; }
+        .setnetwork .form-group .my-input .error-message::before {
+          content: "";
+          margin-right: 5px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 14px;
+          height: 14px;
+          background: url(../../static/images/danger-icon.png) no-repeat 0 0; }
+  .setnetwork .form-action {
+    padding: 10px 0 150px 107px; }
+    .setnetwork .form-action .submit-btn {
+      position: relative;
+      width: 100px;
+      font-size: 12px;
+      line-height: 32px;
+      text-align: center;
+      color: #fff;
+      border-radius: 32px;
+      cursor: pointer;
+      background-color: #4381e6; }
+      .setnetwork .form-action .submit-btn:hover {
+        background-color: #4f8ff3; }
+      .setnetwork .form-action .submit-btn.active {
+        background-color: #3d74cf; }
+      .setnetwork .form-action .submit-btn .save-message {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: 15px;
+        font-size: 12px;
+        line-height: 32px;
+        color: #666;
+        white-space: nowrap; }
+        .setnetwork .form-action .submit-btn .save-message::before {
+          content: "";
+          margin-right: 5px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 14px;
+          height: 14px;
+          background: url(../../static/images/save-success.png) no-repeat 0 0; }
+        .setnetwork .form-action .submit-btn .save-message.fail {
+          color: #ff0000; }
+          .setnetwork .form-action .submit-btn .save-message.fail::before {
+            content: "";
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            height: 14px;
+            background: url(../../static/images/danger-icon.png) no-repeat 0 0; }
+        .setnetwork .form-action .submit-btn .save-message.hide {
+          display: none; }
+
+.update-system {
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */

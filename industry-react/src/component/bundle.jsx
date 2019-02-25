@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-
-export default class bundle extends Component {
+import { Component } from 'react';
+export default class Bundle extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +18,7 @@ export default class bundle extends Component {
     this.setState({
       mod: null
     });
-    props.load((mod) => {
+    props.load().then((mod) => {
       this.setState({
         mod: mod.default ? mod.default : mod
       });
@@ -28,4 +27,5 @@ export default class bundle extends Component {
   render() {
     return this.state.mod ? this.props.children(this.state.mod) : null;
   }
+
 }

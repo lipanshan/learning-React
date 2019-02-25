@@ -104,7 +104,7 @@ export default class RiskWarning  extends Component {
       <div className='riskwarning'>
         <div className="search-wrap">
           <span className="title">筛选条件</span>
-          <Select className="select" defaultValue={this.state.queryParam.condition} onChange={this.selectHandle1.bind(this)}>
+          <Select className="select" value={this.state.queryParam.condition} onChange={this.selectHandle1.bind(this)}>
             {
               this.state.children1.map((item) => (
                 item ? <Option key={item.value} value={item.value} >{item.label}</Option> : ''
@@ -113,7 +113,7 @@ export default class RiskWarning  extends Component {
           </Select>
           <Input className="search-input" onChange={this.searchHandle.bind(this)} placeholder="关键字" type="text"/>
           <span className="title">类型</span>
-          <Select className="select" defaultValue={this.state.queryParam.riskType} onChange={this.selectHandle2.bind(this)}>
+          <Select className="select" value={this.state.queryParam.riskType} onChange={this.selectHandle2.bind(this)}>
             {
               this.state.children2.map((item) => (
                 item ? <Option key={item.value}  value={item.value} >{item.label}</Option> : ''
@@ -151,7 +151,7 @@ export default class RiskWarning  extends Component {
             pagination={false}
           ></Table>
           <div className="pagination-wrap">
-            <Pagination className="" defaultCurrent={this.state.queryParam.pageIndex} onChange={this.paginationChange.bind(this)} total={this.state.queryParam.pageNum}></Pagination>
+            <Pagination className="" current={this.state.queryParam.pageIndex} onChange={this.paginationChange.bind(this)} total={this.state.queryParam.pageNum}></Pagination>
           </div>
         </div>
       </div>
@@ -166,7 +166,8 @@ export default class RiskWarning  extends Component {
         this.setState({
           tableData: res.data.list,
           queryParam: Object.assign({}, this.state.queryParam, {
-            pageNum: res.data.pageNum
+            pageNum: res.data.pageNum,
+            pageIndex: res.data.pageIndex
           }),
           loading: false
         })
@@ -220,25 +221,29 @@ export default class RiskWarning  extends Component {
   searchHandle (e) {
     this.setState({
       queryParam: Object.assign({}, this.state.queryParam, {
-        keyword: e.target.value
+        keyword: e.target.value,
+        pageIndex: 1
       })
     })
   }
   selectHandle1 (selected) {
     this.setState({
       queryParam: Object.assign({}, this.state.queryParam, {
-        condition: selected
+        condition: selected,
+        pageIndex: 1
       })
     }, () => this.getTableInfo(this.state.queryParam))
   }
   selectHandle2 (selected) {
     this.setState({
       queryParam: Object.assign({}, this.state.queryParam, {
-        riskType: selected
+        riskType: selected,
+        pageIndex: 1
       })
     }, () => this.getTableInfo(this.state.queryParam))
   }
   paginationChange (pagination) {
+    console.log(pagination  )
     this.setState({
       queryParam: Object.assign({}, this.state.queryParam, {
         pageIndex: pagination

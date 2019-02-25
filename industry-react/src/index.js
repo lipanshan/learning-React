@@ -6,15 +6,10 @@ import myHead from "./container/header";
 import Login from "./container/login";
 import MainMenu from "./container/mainmenu";
 import Home from "./component/home";
-import Changepassword from "./component/changepassword.jsx";
-import IpEarlyWarning from "./component/ipearlywarning.jsx";
-import RiskWarning from "./component/riskwarning";
-import PortLog from "./component/portlog.jsx";
-import Systemsetup from "./component/systemsetup.jsx";
-import Systemupgrade from "./component/systemupgrade.jsx";
-import Networksetup from "./component/networksetup.jsx";
+import {NeedChangepassword, NeedIpEarlyWarning, NeedRiskWarning, NeedPortLog, NeedSystemsetup, NeedSystemupgrade, NeedNetworksetup} from './assets/js/needComponent'
 import './index.css';
 import './assets/sass/style.css';
+
 ReactDOM.render( <BrowserRouter basename='/'>
   <Switch>
     <Route exact path="/login" component={Login} ></Route>
@@ -24,13 +19,13 @@ ReactDOM.render( <BrowserRouter basename='/'>
         <Route component={myHead}></Route>
         <Switch>
           <Route exact path={`${match.url}/`} component={Home}></Route>
-          <Route path={`${match.url}/riskWarning`} component={RiskWarning}></Route>
-          <Route path={`${match.url}/ipRisk`} component={IpEarlyWarning}></Route>
-          <Route path={`${match.url}/portLog`} component={PortLog}></Route>
-          <Route path={`${match.url}/password`} component={Changepassword}></Route>
-          <Route path={`${match.url}/setnetwork`} component={Networksetup}></Route>
-          <Route path={`${match.url}/setsystem`} component={Systemsetup}></Route>
-          <Route path={`${match.url}/upgrade`} component={Systemupgrade}></Route>
+          <Route path={`${match.url}/riskWarning`} component={NeedRiskWarning}></Route>
+          <Route path={`${match.url}/ipRisk`} component={NeedIpEarlyWarning}></Route>
+          <Route path={`${match.url}/portLog`} component={NeedPortLog}></Route>
+          <Route path={`${match.url}/password`} component={NeedChangepassword}></Route>
+          <Route path={`${match.url}/setnetwork`} component={NeedNetworksetup}></Route>
+          <Route path={`${match.url}/setsystem`} component={NeedSystemsetup}></Route>
+          <Route path={`${match.url}/upgrade`} component={NeedSystemupgrade}></Route>
           <Route path={`${match.url}/*`} component={Home}></Route>
         </Switch>
       </div>

@@ -81,7 +81,7 @@ export default class Ipearlywarning  extends Component {
             <span className="title">源IP</span>
             <Input className="search-input" onChange={this.searchHandle.bind(this)} placeholder="关键字" type="text"/>
             <span className="title">时间</span>
-            <Select className="select" defaultValue={this.state.queryParam.datetime} onChange={this.selectHandle1.bind(this)}>
+            <Select className="select" value={this.state.queryParam.datetime} onChange={this.selectHandle1.bind(this)}>
               {
                 this.state.children.map((item) => (
                   item ? <Option key={item.value} value={item.value} >{item.label}</Option> : ''
@@ -99,7 +99,7 @@ export default class Ipearlywarning  extends Component {
               pagination={false}
             ></Table>
             <div className="pagination-wrap">
-              <Pagination className="" defaultCurrent={this.state.queryParam.pageIndex} onChange={this.paginationChange.bind(this)} total={this.state.queryParam.pageNum}></Pagination>
+              <Pagination className="" current={this.state.queryParam.pageIndex} onChange={this.paginationChange.bind(this)} total={this.state.queryParam.pageNum}></Pagination>
             </div>
           </div>
         </div>
@@ -115,7 +115,8 @@ export default class Ipearlywarning  extends Component {
           tableData: res.data.list,
           queryParam: Object.assign({}, this.state.queryParam, {
             pageNum: res.data.pageNum,
-            pageSize: res.data.pageSize
+            pageSize: res.data.pageSize,
+            pageIndex: res.data.pageIndex
           })
         })
       } else if (res.ret === 499) {

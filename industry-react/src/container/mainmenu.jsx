@@ -31,9 +31,10 @@ export default class Menu extends Component {
           systemVersion: res.data.systemInfo.systemVersion,
           menuList: (() => {
             const arr = []
+            const currentPath = this.props.history.location.pathname.substring(1)
             for (let item of res.data.leftMenu) {
               arr.push(Object.assign({}, item, {
-                collapse: 'hide'
+                collapse:  item.pathUrl === currentPath || item.subset.find((obj) => obj.pathUrl === currentPath)? '' : 'hide'
               }))
             }
             return arr
@@ -55,7 +56,7 @@ export default class Menu extends Component {
                 <li key={item.id} className="item">
                   <div className={`menu-txt menu${index} ${item.pathUrl === this.state.active ? 'active' : ''}`} onClick={this.switchHandle.bind(this, item)}>
                     <span className="left-icon"></span>
-                    <Link to={`/${item.pathUrl}`} className="title">{item.name}</Link>
+                    <Link to={`/${item.pathUrl}`} onClick={this.menuSelect.bind(this, item)} className="title">{item.name}</Link>
                     {
                       item.subset.length ? <span onClick={this.toggleMenu.bind(this, item)} className={`arrow-icon ${item.collapse ? '' : 'up'}`}></span> : ''
                     }
@@ -91,12 +92,30 @@ export default class Menu extends Component {
       </div>
     )
   }
-  toggleMenu (data) {
+  toggleMenu (data, e) {
     const arr = []
     for (let item of this.state.menuList) {
       if (item.id === data.id) {
         arr.push(Object.assign({}, item, {
           collapse: data.collapse ? '' : 'hide'
+        }))
+      } else {
+        arr.push(item)
+      }
+    }
+    this.setState({
+      menuList: arr
+    })
+    e.stopPropagation()
+    e.preventDefault()
+  }
+
+  menuSelect (data) {
+    const arr = []
+    for (let item of this.state.menuList) {
+      if (item.id === data.id) {
+        arr.push(Object.assign({}, item, {
+          collapse: ''
         }))
       } else {
         arr.push(item)

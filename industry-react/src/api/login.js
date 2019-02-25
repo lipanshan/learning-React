@@ -42,6 +42,31 @@ export function getVcode (url, param = {}) {
   })
   return `http://${process.env.REACT_APP_API}?service=App.User.VcodeCreate&tips=${time}&sign=${createSign(data)}`
 }
+export function signOut () {
+  const time = new Date().getTime()
+  let param = {
+    'service': 'App.User.LoginOut',
+    'tips': time
+  }
+  const s = Object.assign({}, param, {
+    sign: createSign(param)
+  })
+  const arr = []
+  for (let key of Object.keys(s)) {
+    arr.push(`${key}=${encodeURIComponent(s[key])}`)
+  }
+  const fullUrl = `http://${BASE_URL}`
+  return fetch(fullUrl, {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: arr.join('&')
+  }).then((res) => {
+    return Promise.resolve(res.json())
+  })
+}
 
 function getRSACode (newStr){
   //公钥
