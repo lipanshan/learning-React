@@ -24,6 +24,7 @@ ReactDOM.render( <BrowserRouter basename='/'>
           <Route path={`${match.url}/portLog`} component={NeedPortLog}></Route>
           <Route path={`${match.url}/password`} component={NeedChangepassword}></Route>
           <Route path={`${match.url}/setnetwork`} component={NeedNetworksetup}></Route>
+          <Route path={`${match.url}/setdeployment`} component={NeedNetworksetup}></Route>
           <Route path={`${match.url}/setsystem`} component={NeedSystemsetup}></Route>
           <Route path={`${match.url}/upgrade`} component={NeedSystemupgrade}></Route>
           <Route path={`${match.url}/*`} component={Home}></Route>
